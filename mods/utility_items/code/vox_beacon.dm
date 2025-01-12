@@ -165,11 +165,3 @@
 			SPAN_NOTICE("\The [user] inserts \a [H] into \the [src]."),
 		)
 		return 1
-
-/obj/structure/voxuplink/vox_ship/use_grab(obj/item/grab/G)
-	if(G.affecting.stat == DEAD)
-		favors += 1
-		qdel(G.affecting)
-	else
-		favors += 5
-		qdel(G.affecting)
